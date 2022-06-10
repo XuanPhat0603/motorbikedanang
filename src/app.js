@@ -4,10 +4,10 @@ import { dirname } from 'path'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import serverless from 'serverless-http'
-import { connectDB } from "./lib/mongodb.js"
+// import { connectDB } from "./lib/mongodb.js"
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
+// const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname()
 
 const app = express()
 const port = process.env.PORT || 3000
