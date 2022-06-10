@@ -1,23 +1,22 @@
 import express from "express"
 import { engine } from 'express-handlebars'
-import { dirname } from 'path'
 import path from 'path'
-import { fileURLToPath } from 'url'
 import serverless from 'serverless-http'
 // import { connectDB } from "./lib/mongodb.js"
+import { dirname } from 'path'
+import { fileURLToPath } from 'url'
 
-// const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname()
 
 const app = express()
 const port = process.env.PORT || 3000
 
 // connectDB()
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')))
 app.engine('hbs', engine({ extname: '.hbs' }))
 app.set('view engine', 'hbs')
-app.set('views', path.join(__dirname, 'views'))
+app.set('views', path.join(__dirname, './views'))
 
 const router = express.Router()
 
