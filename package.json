@@ -19,8 +19,8 @@
   },
   "scripts": {
     "dev": "nodemon ./src/app.js",
-    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
-    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src"
+    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve .src/app.js",
+    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build .src/app.js"
   },
   "repository": {
     "type": "git",
