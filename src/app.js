@@ -23,6 +23,38 @@ app.get('/', (req, res) => {
     res.render('index')
 })
 
+app.get('/shop', (req, res) => {
+    res.render('shop')
+})
+
+app.get('/about', (req, res) => {
+    res.render('about')
+})
+
+app.get('/shop-details', (req, res) => {
+    res.render('shop-details')
+})
+
+app.get('/shopping-cart', (req, res) => {
+    res.render('shopping-cart')
+})
+
+app.get('/checkout', (req, res) => {
+    res.render('checkout')
+})
+
+app.get('/blog', (req, res) => {
+    res.render('blog')
+})
+
+app.get('/blog-details', (req, res) => {
+    res.render('blog-details')
+})
+
+app.get('/contact', (req, res) => {
+    res.render('contact')
+})
+
 app.listen(port, () => {
     console.log(`[Server] is running ${port}`)
 })

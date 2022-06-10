@@ -2,14 +2,16 @@
   "name": "motorbike-rental-web",
   "description": "",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "type": "module",
   "dependencies": {
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "express-handlebars": "^6.0.6",
     "mongoose": "^6.3.6",
-    "path": "^0.12.7"
+    "netlify-lambda": "^2.0.15",
+    "path": "^0.12.7",
+    "serverless-http": "^3.0.1"
   },
   "devDependencies": {
     "morgan": "^1.10.0",
@@ -17,7 +19,8 @@
   },
   "scripts": {
     "dev": "nodemon ./src/app.js",
-    "start": "node ./src/app.js"
+    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
+    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src"
   },
   "repository": {
     "type": "git",
