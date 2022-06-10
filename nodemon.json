@@ -1,0 +1,7 @@
+{
+    "watch": [
+        "app.js",
+        "src/"
+    ],
+    "ext": "hbs js"
+}
