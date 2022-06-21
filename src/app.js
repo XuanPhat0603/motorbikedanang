@@ -1,22 +1,23 @@
-import express from "express"
+import express from 'express'
 import { engine } from 'express-handlebars'
 import path from 'path'
-import serverless from 'serverless-http'
 // import { connectDB } from "./lib/mongodb.js"
-import { dirname } from 'path'
 import { fileURLToPath } from 'url'
 
-
+// get file path of the current file
+const __filename = fileURLToPath(import.meta.url)
+// get directory path of the current file
+const __dirname = path.dirname(__filename)
 const app = express()
 const port = process.env.PORT || 3000
 
 // connectDB()
-const __dirname = dirname(fileURLToPath(import.meta.url))
+
 
 app.use(express.static(path.join(__dirname, 'public')))
 app.engine('hbs', engine({ extname: '.hbs' }))
 app.set('view engine', 'hbs')
-app.set('views', path.join(__dirname, './views'))
+app.set('views', path.join(__dirname, 'views'))
 
 const router = express.Router()
 
@@ -56,7 +57,8 @@ router.get('/contact', (req, res) => {
     res.render('contact')
 })
 
-app.use('/.netlify/functions/server', router);  // path must route to lambda
+app.use(router);
 
-export default app
-export const handler = () => serverless()
+app.listen(port, () => {
+    console.log("[Server] is running on port " + port);
+})
