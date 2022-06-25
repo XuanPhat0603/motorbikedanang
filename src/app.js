@@ -4,16 +4,11 @@ import path from 'path'
 // import { connectDB } from "./lib/mongodb.js"
 import { fileURLToPath } from 'url'
 
-// get file path of the current file
 const __filename = fileURLToPath(import.meta.url)
-// get directory path of the current file
 const __dirname = path.dirname(__filename)
 import routes from './routes/index.js'
 const app = express()
 const port = process.env.PORT || 3000
-
-// connectDB()
-
 
 app.use(express.static(path.join(__dirname, 'public')))
 app.engine('hbs', engine({ extname: '.hbs' }))
