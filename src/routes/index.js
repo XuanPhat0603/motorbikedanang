@@ -12,12 +12,6 @@ const router = express.Router()
 
 const defaultRoutes = [
     {
-        path: '/',
-        route: (req, res) => {
-            res.render('index');
-        },
-    },
-    {
         path: '/shop',
         route: shopRoute,
     },
@@ -48,6 +42,12 @@ const defaultRoutes = [
     {
         path: '/contact',
         route: contactRoute,
+    },
+    {
+        path: '/',
+        route: (req, res) => {
+            res.render('index');
+        },
     },
 ];
 
