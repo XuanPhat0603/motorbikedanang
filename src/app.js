@@ -2,7 +2,7 @@ import express from 'express'
 import { engine } from 'express-handlebars'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import morgan from 'morgan'
+//import morgan from 'morgan'
 import favicon from 'serve-favicon'
 import bodyParser from 'body-parser'
 import routes from './routes/index.js'
@@ -28,7 +28,7 @@ app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
 connectDB()
 
-app.use(morgan('dev'))
+//app.use(morgan('dev'))
 
 app.use(routes);
 
