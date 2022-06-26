@@ -7,6 +7,8 @@ import contactRoute from './contact.route.js'
 import shopRoute from './shop.route.js'
 import shopDetailsRoute from './shopDetails.route.js'
 import shoppingCartRoute from './shoppingCart.route.js'
+import motorbikeRoute from './api/motorbike.route.js'
+import brandRoute from './api/brand.route.js'
 
 const router = express.Router()
 
@@ -42,6 +44,14 @@ const defaultRoutes = [
     {
         path: '/contact',
         route: contactRoute,
+    },
+    {
+        path: '/api/motorbike',
+        route: motorbikeRoute,
+    },
+    {
+        path: '/api/brand',
+        route: brandRoute,
     },
     {
         path: '/',
