@@ -3,6 +3,7 @@ import { engine } from 'express-handlebars'
 import path from 'path'
 // import { connectDB } from "./lib/mongodb.js"
 import { fileURLToPath } from 'url'
+import favicon from 'serve-favicon'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -14,6 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.engine('hbs', engine({ extname: '.hbs' }))
 app.set('view engine', 'hbs')
 app.set('views', path.join(__dirname, 'views'))
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
 app.use(routes);
 

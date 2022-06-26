@@ -545,13 +545,20 @@ ol {
 }
 
 .hero__slider.owl-carousel .owl-nav button {
-	font-size: 36px;
-	color: #333333;
+	font-size: 40px;
+	color: #3A3A3A;
 	position: absolute;
 	left: 75px;
 	top: 50%;
 	margin-top: -18px;
-	line-height: 29px;
+	line-height: 30px;
+	background-color: #fff;
+	border-radius: 50%;
+	opacity: 0.6;
+}
+
+.hero__slider.owl-carousel .owl-nav button:hover {
+	opacity: 0.8;
 }
 
 .hero__slider.owl-carousel .owl-nav button.owl-next {
@@ -561,7 +568,9 @@ ol {
 
 .hero__items {
 	height: 800px;
-	padding-top: 230px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
 .hero__text h6 {
@@ -3933,4 +3942,8 @@ ol {
 	.categories__text:before {
 		height: 250px;
 	}
+}
+
+.hover_link:hover {
+	opacity: 0.4;
 }
