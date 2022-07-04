@@ -36,10 +36,10 @@
                                 </div>
                                 <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
                                     <div class="card-body">
-                                        <div class="shop__sidebar__categories">
-                                            <ul class="nice-scroll">
-                                                <li><a href="#">Manual Transmission</a></li>
-                                                <li><a href="#">Automatic Transmission</a></li>
+                                        <div class="shop__sidebar__brand">
+                                            <ul>
+                                                <li><a href="/shop/search?type=manual">Manual</a></li>
+                                                <li><a href="/shop/search?type=automatic">Automatic</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -54,7 +54,10 @@
                                         <div class="shop__sidebar__brand">
                                             <ul>
                                                 <li><a href="#">Honda</a></li>
-                                                <li><a href="#"></a></li>
+                                                <li><a href="#">Vision</a></li>
+                                                <li><a href="#">Vision</a></li>
+                                                <li><a href="#">Vision</a></li>
+                                                <li><a href="#">Vision</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -84,7 +87,7 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="shop__product__option__left">
-                                <p>Showing 1–12 of 126 results</p>
+                                <p>Showing 1– 12 of {{ totalProduct }} results</p>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
@@ -101,7 +104,7 @@
                 </div>
                 <div class="row">
                     {{#each products}}
-                    {{>card product}}
+                    {{>card this}}
                     {{/each}}
                 </div>
                 <div class="row">

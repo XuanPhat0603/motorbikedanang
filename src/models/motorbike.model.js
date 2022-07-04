@@ -1,5 +1,4 @@
 import mongoose from "mongoose"
-import Type from "./type.model.js"
 
 const motorbikeSchema = new mongoose.Schema({
     name: {
@@ -7,7 +6,8 @@ const motorbikeSchema = new mongoose.Schema({
         required: true
     },
     brand: {
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Brand",
         required: true
     },
     quantity: {

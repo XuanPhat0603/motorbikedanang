@@ -3,10 +3,6 @@ import Brand from "../../models/brand.model.js"
 
 const router = Router()
 
-router.get("/", (req, res) => {
-    res.json("Hello World")
-})
-
 router.post("/", async (req, res) => {
     try {
         const newBrand = new Brand(req.body)

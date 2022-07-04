@@ -9,6 +9,7 @@ import shopDetailsRoute from './shopDetails.route.js'
 import shoppingCartRoute from './shoppingCart.route.js'
 import motorbikeRoute from './api/motorbike.route.js'
 import brandRoute from './api/brand.route.js'
+import typeRoute from './api/type.route.js'
 
 const router = express.Router()
 
@@ -38,7 +39,7 @@ const defaultRoutes = [
         route: blogRoute,
     },
     {
-        path: 'blog-details',
+        path: '/blog-details',
         route: blogDetailsRoute,
     },
     {
@@ -54,10 +55,8 @@ const defaultRoutes = [
         route: brandRoute,
     },
     {
-        path: '/',
-        route: (req, res) => {
-            res.render('index');
-        },
+        path: '/api/type',
+        route: typeRoute,
     },
 ];
 
