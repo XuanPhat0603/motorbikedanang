@@ -58,6 +58,12 @@ const defaultRoutes = [
         path: '/api/type',
         route: typeRoute,
     },
+    {
+        path: "/",
+        route: (req, res) => {
+            res.render('index');
+        },
+    },
 ];
 
 defaultRoutes.forEach((route) => {
